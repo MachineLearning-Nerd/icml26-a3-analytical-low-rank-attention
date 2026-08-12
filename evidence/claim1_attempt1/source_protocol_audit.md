@@ -12,7 +12,7 @@ A3's low-rank approximated LLaMA 3.1-70B achieves WikiText-2 perplexity 4.69 at 
 
 ## Protocol availability finding
 
-The pinned paper source supplies tables and method TeX but no LLaMA-3.1-70B weights, WikiText-2 preprocessing/evaluation launcher, SVD-LLM pin, compression configuration, calibration activations, seed list, or benchmark outputs. A claimed 70B perplexity number cannot be independently rerun source-faithfully from the archive.
+The pinned paper source supplies tables and method TeX but no LLaMA-3.1-70B weights, WikiText-2 preprocessing/evaluation launcher, SVD-LLM pin, compression configuration, calibration activations, seed list, or benchmark outputs. The paper does link the official implementation [`DeepWok/a3`](https://github.com/DeepWok/a3), which is pinned for this audit at commit [`f688fc5d270ea9185fe29ea656bf168f0fab787a`](https://github.com/DeepWok/a3/tree/f688fc5d270ea9185fe29ea656bf168f0fab787a). That repository supplies the collection, approximation, and evaluation code, but its audited tree does not include the 70B checkpoint, calibration statistics, SVD-LLM artifact, or the exact paper run outputs. A claimed 70B perplexity number therefore cannot be independently rerun source-faithfully from the currently available artifacts.
 
 ## Outcome
 

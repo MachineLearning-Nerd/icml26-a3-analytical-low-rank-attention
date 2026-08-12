@@ -12,7 +12,7 @@ Pinned source excerpts: `evidence/claim5_attempt1/a3_qk_ov_excerpt.tex` and `a3_
 - A3-OV: per-head autocorrelation weighted truncated SVD;
 - A3-MLP: diagonal channel-selection/CUR-style finite conformance.
 
-Run: `../icml26-repro-L5JTAPUdbQ-diffusion-low-dimensional-distributions/.venv/bin/python src/claim5_a3_conformance.py --out outputs/claim5_a3_conformance --seeds 11 23 47 89 131`.
+Run: `python3 src/claim5_a3_conformance.py --out outputs/claim5_a3_conformance --seeds 11 23 47 89 131`.
 
 ## Result and control
 
