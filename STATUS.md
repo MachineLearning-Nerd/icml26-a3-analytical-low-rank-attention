@@ -11,7 +11,7 @@
 - Compute policy: local CPU/local GPU only; no HF cpu-upgrade, Jobs, paid/remote compute
 - Target GitHub repository: `https://github.com/MachineLearning-Nerd/icml26-a3-analytical-low-rank-attention`
 - Former GitHub repository: `https://github.com/MachineLearning-Nerd/icml26-repro-aeeo8ZAftQ-analytical-low-rank-attention`
-- Current phase: `claim_ledger_and_official_code_audit`
+- Current phase: `published_and_verified`
 - Branch policy: normalized collection copy has only `main`; author branches are documented, not edited
 - Claim 1: inconclusive — paper-scale LLaMA-3.1-70B/WikiText-2 protocol lacks the weights, calibration artifacts, and complete evaluation pin needed for a source-faithful rerun.
 - Claim 2: unverified — LLaMA-2-7B WikiText-2 PPL comparison.

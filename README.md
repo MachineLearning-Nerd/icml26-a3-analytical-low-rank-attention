@@ -126,6 +126,29 @@ The audited official-code pin is separate from the paper-source pin:
 DeepWok/a3  f688fc5d270ea9185fe29ea656bf168f0fab787a  (master)
 ```
 
+## Audit dossier and final-state check
+
+The standardized audit records are:
+
+- [CLAIM_EVIDENCE.md](CLAIM_EVIDENCE.md): claim-by-claim production paths and verdicts.
+- [SOURCE_AUDIT.md](SOURCE_AUDIT.md): paper, source archive, official implementation, and provenance boundaries.
+- [ENVIRONMENT.md](ENVIRONMENT.md): local compute contract and the unavailable paper-scale requirements.
+- [REPORT.md](REPORT.md): conservative reproduction report and publication policy.
+- [BRANCH_AUDIT.md](BRANCH_AUDIT.md): normalized collection branch summary; [branch-audit.md](branch-audit.md) is the complete one-branch map.
+- [CITATION.cff](CITATION.cff): machine-readable paper citation.
+- [AUTHOR_THANK_YOU.md](AUTHOR_THANK_YOU.md): author acknowledgment.
+
+From a fresh clone, run:
+
+~~~sh
+python3 verify_final.py
+~~~
+
+The verifier checks the live one-branch GitHub state, canonical
+MachineLearning-Nerd attribution, required dossier files, claim contracts,
+finite Claim 5 evidence, and the explicit block on unsupported paper-scale
+claims.
+
 ## Citation
 
 ```bibtex

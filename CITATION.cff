@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If this audit dossier or its scoped evidence is useful, please cite the paper and this repository."
+type: software
+title: "A³: an Analytical Low-Rank Approximation Framework for Attention — scoped reproduction audit"
+abstract: "A source-pinned, official-code-audited, and finite-conformance reproduction dossier for the A³ attention approximation framework."
+authors:
+  - family-names: Wong
+    given-names: Jeffrey T. H.
+  - family-names: Zhang
+    given-names: Cheng
+  - family-names: Cao
+    given-names: Xinye
+  - family-names: Gimenes
+    given-names: Pedro
+  - family-names: Bouganis
+    given-names: Christos-Savvas
+  - family-names: Constantinides
+    given-names: George Anthony
+  - family-names: Luk
+    given-names: Wayne
+  - family-names: Zhao
+    given-names: Yiren
+repository-code: "https://github.com/MachineLearning-Nerd/icml26-a3-analytical-low-rank-attention"
+url: "https://arxiv.org/abs/2505.12942"
+date-released: 2026-08-17
+keywords:
+  - ICML 2026
+  - low-rank approximation
+  - attention
+  - reproduction audit
