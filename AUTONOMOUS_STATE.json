@@ -26,8 +26,8 @@
     "5": 1,
     "6": 0
   },
-  "last_checkpoint": "2026-08-17T01:08:24Z",
-  "last_known_git_commit": "756c9a72b13cc4d5ee3241a46dbffc894dc19501",
+  "last_checkpoint": "2026-08-19T14:12:51+05:30",
+  "last_known_git_commit": "788005da4dd43f2f0a1594aa357958800333ba3f",
   "publication_allowed": false,
   "overall_verdict": "PARTIAL_REPRODUCTION_WITH_PAPER_SCALE_CLAIMS_UNVERIFIED",
   "score_claim": false,
