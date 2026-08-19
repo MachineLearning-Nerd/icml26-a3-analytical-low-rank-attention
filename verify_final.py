@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parent
 REPOSITORY = "icml26-a3-analytical-low-rank-attention"
 CANONICAL = (
     "MachineLearning-Nerd",
-    "37579156+MachineLearning-Nerd@users.noreply.github.com",
+    "MachineLearning-Nerd@users.noreply.github.com",
 )
 REQUIRED_PATHS = [
     "README.md",
@@ -29,6 +29,7 @@ REQUIRED_PATHS = [
     "AUTHOR_THANK_YOU.md",
     "CITATION.cff",
     "claims.json",
+    "reproduction_verdicts.json",
     "EVIDENCE_MANIFEST.json",
     "verify_final.py",
     "contract/live_claims.json",
@@ -181,10 +182,33 @@ def main() -> None:
         "claims repository mismatch",
     )
     require(claims.get("publication_allowed") is False, "publication block changed")
+    require(
+        claims.get("overall_verdict") == "PARTIAL_REPRODUCTION_WITH_PAPER_SCALE_CLAIMS_UNVERIFIED"
+        and claims.get("score_claim") is False
+        and claims.get("official_author_endorsement") is False,
+        "claims publication boundary changed",
+    )
     rows = claims.get("claims")
     require(isinstance(rows, list) and len(rows) == 6, "claims.json must contain six claims")
     statuses = [row.get("status") for row in rows]
     require(statuses == EXPECTED_STATUSES, f"unexpected claim statuses: {statuses}")
+
+    reproduction = current_json("reproduction_verdicts.json")
+    require(
+        reproduction.get("repository") == f"MachineLearning-Nerd/{REPOSITORY}"
+        and reproduction.get("overall_verdict") == "PARTIAL_REPRODUCTION_WITH_PAPER_SCALE_CLAIMS_UNVERIFIED"
+        and reproduction.get("publication_allowed") is False
+        and reproduction.get("score_claim") is False
+        and reproduction.get("official_author_endorsement") is False,
+        "reproduction header changed",
+    )
+    reproduction_rows = reproduction.get("claims")
+    require(
+        isinstance(reproduction_rows, list)
+        and [(row.get("id"), row.get("status")) for row in reproduction_rows]
+        == [(row.get("id"), row.get("status")) for row in rows],
+        "reproduction claim records changed",
+    )
 
     live_claims = current_json("contract/live_claims.json")
     require(
@@ -200,6 +224,13 @@ def main() -> None:
     state = current_json("AUTONOMOUS_STATE.json")
     require(state.get("phase") == "published_and_verified", "state is not final")
     require(state.get("publication_allowed") is False, "state publication block changed")
+    require(
+        state.get("overall_verdict") == "PARTIAL_REPRODUCTION_WITH_PAPER_SCALE_CLAIMS_UNVERIFIED"
+        and state.get("score_claim") is False
+        and state.get("official_author_endorsement") is False
+        and state.get("branch_count") == 1,
+        "state publication boundary changed",
+    )
     require(state.get("last_known_git_commit"), "state has no recorded commit")
 
     summary = current_json("outputs/claim5_a3_conformance/summary.json")

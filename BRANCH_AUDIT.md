@@ -14,7 +14,7 @@ not renamed or rewritten by this project.
 
 All reachable collection commits are attributed to:
 
-    MachineLearning-Nerd <37579156+MachineLearning-Nerd@users.noreply.github.com>
+    MachineLearning-Nerd <MachineLearning-Nerd@users.noreply.github.com>
 
 The presence of the author-branch inventory is provenance only; it is not
 evidence that any author branch is a maintained release or that a benchmark

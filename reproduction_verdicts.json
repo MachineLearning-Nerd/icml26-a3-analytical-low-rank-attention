@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "repository": "MachineLearning-Nerd/icml26-a3-analytical-low-rank-attention",
+  "paper": {
+    "title": "A³: an Analytical Low-Rank Approximation Framework for Attention",
+    "arxiv": "2505.12942",
+    "openreview": "aeeo8ZAftQ",
+    "authors": [
+      "Jeffrey T. H. Wong",
+      "Cheng Zhang",
+      "Xinye Cao",
+      "Pedro Gimenes",
+      "Christos-Savvas Bouganis",
+      "George Anthony Constantinides",
+      "Wayne Luk",
+      "Yiren Zhao"
+    ]
+  },
+  "overall_verdict": "PARTIAL_REPRODUCTION_WITH_PAPER_SCALE_CLAIMS_UNVERIFIED",
+  "publication_allowed": false,
+  "score_claim": false,
+  "official_author_endorsement": false,
+  "claims": [
+    {
+      "id": "C1",
+      "status": "inconclusive_source_protocol",
+      "production_path": "evidence/claim1_attempt1/source_protocol_audit.md plus evidence/official_code_audit.md",
+      "scope": "The 70B result cannot be rerun from the pinned public artifacts because the required weights, calibration data, baseline pin, and evaluation bundle are unavailable.",
+      "evidence": ["evidence/claim1_attempt1/source_protocol_audit.md", "evidence/source/SHA256SUMS"]
+    },
+    {
+      "id": "C2",
+      "status": "unverified",
+      "production_path": "contract/live_claims.json and the official collect -> approx -> eval ppl workflow",
+      "scope": "No accepted LLaMA-2-7B paper-scale reproduction is present.",
+      "evidence": ["contract/live_claims.json", "evidence/official_code_audit.md"]
+    },
+    {
+      "id": "C3",
+      "status": "unverified",
+      "production_path": "contract/live_claims.json and the official collect -> approx -> eval ppl workflow",
+      "scope": "No accepted LLaMA 3.1-8B paper-scale reproduction is present.",
+      "evidence": ["contract/live_claims.json", "evidence/official_code_audit.md"]
+    },
+    {
+      "id": "C4",
+      "status": "unverified",
+      "production_path": "contract/live_claims.json and evidence/official_code_audit.md eval harness route",
+      "scope": "No accepted complete five-task downstream accuracy bundle is present.",
+      "evidence": ["contract/live_claims.json", "evidence/official_code_audit.md"]
+    },
+    {
+      "id": "C5",
+      "status": "toy_finite_conformance",
+      "production_path": "src/claim5_a3_conformance.py with five-seed checked-in outputs and source excerpts",
+      "scope": "The finite d=12/r=4 fixture supports implementation conformance with negative controls; it is not a universal proof or LLaMA benchmark reproduction.",
+      "evidence": ["src/claim5_a3_conformance.py", "outputs/claim5_a3_conformance/summary.json", "logbook/claim-5.md"]
+    },
+    {
+      "id": "C6",
+      "status": "unverified",
+      "production_path": "contract/live_claims.json and evidence/official_code_audit.md profiling route",
+      "scope": "No accepted A100 40GB LLaMA-2-13B throughput reproduction is present.",
+      "evidence": ["contract/live_claims.json", "evidence/official_code_audit.md"]
+    }
+  ]
+}

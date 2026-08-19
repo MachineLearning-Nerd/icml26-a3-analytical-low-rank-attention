@@ -16,11 +16,15 @@
     "arxiv": "2505.12942",
     "openreview": "aeeo8ZAftQ"
   },
+  "overall_verdict": "PARTIAL_REPRODUCTION_WITH_PAPER_SCALE_CLAIMS_UNVERIFIED",
+  "score_claim": false,
+  "official_author_endorsement": false,
   "claims": [
     {
       "id": "C1",
       "status": "inconclusive_source_protocol",
       "paper_statement": "LLaMA 3.1-70B reaches WikiText-2 PPL 4.69 versus SVD-LLM 7.87 at 10% compression.",
+      "production_path": "evidence/claim1_attempt1/source_protocol_audit.md plus evidence/official_code_audit.md",
       "scope": "Source/protocol availability audit; no paper-scale rerun asserted.",
       "evidence": [
         "evidence/claim1_attempt1/source_protocol_audit.md",
@@ -32,6 +36,7 @@
       "id": "C2",
       "status": "unverified",
       "paper_statement": "LLaMA-2-7B reaches WikiText-2 PPL 5.96 versus 8.78.",
+      "production_path": "contract/live_claims.json and the documented official collect -> approx -> eval ppl workflow",
       "scope": "No accepted source-faithful model, calibration, or evaluation bundle.",
       "evidence": [
         "contract/live_claims.json",
@@ -42,6 +47,7 @@
       "id": "C3",
       "status": "unverified",
       "paper_statement": "LLaMA 3.1-8B reaches WikiText-2 PPL 7.93 versus 19.12.",
+      "production_path": "contract/live_claims.json and the documented official collect -> approx -> eval ppl workflow",
       "scope": "No accepted source-faithful model, calibration, or evaluation bundle.",
       "evidence": [
         "contract/live_claims.json",
@@ -52,6 +58,7 @@
       "id": "C4",
       "status": "unverified",
       "paper_statement": "A³ has higher average accuracy than SVD-LLM across five downstream tasks.",
+      "production_path": "contract/live_claims.json and evidence/official_code_audit.md eval harness route",
       "scope": "No accepted complete five-task lm-eval output bundle.",
       "evidence": [
         "contract/live_claims.json",
@@ -62,6 +69,7 @@
       "id": "C5",
       "status": "toy_finite_conformance",
       "paper_statement": "Theorems 2–3 and Lemma 4 define the analytical A³-QK, A³-OV, and A³-MLP routes.",
+      "production_path": "src/claim5_a3_conformance.py with five-seed checked-in outputs and source excerpts",
       "scope": "Five-seed d=12/r=4 synthetic matrix fixture with predeclared negative controls; not a universal proof.",
       "evidence": [
         "src/claim5_a3_conformance.py",
@@ -75,6 +83,7 @@
       "id": "C6",
       "status": "unverified",
       "paper_statement": "Figure 3 reports A³ throughput speedups on an A100 40GB for LLaMA-2-13B.",
+      "production_path": "contract/live_claims.json and evidence/official_code_audit.md profiling route",
       "scope": "No accepted A100 profiling output.",
       "evidence": [
         "contract/live_claims.json",

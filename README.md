@@ -137,6 +137,9 @@ The standardized audit records are:
 - [BRANCH_AUDIT.md](BRANCH_AUDIT.md): normalized collection branch summary; [branch-audit.md](branch-audit.md) is the complete one-branch map.
 - [CITATION.cff](CITATION.cff): machine-readable paper citation.
 - [AUTHOR_THANK_YOU.md](AUTHOR_THANK_YOU.md): author acknowledgment.
+- [claims.json](claims.json) and [reproduction_verdicts.json](reproduction_verdicts.json): machine-readable claim statuses, production paths, and evidence boundaries.
+- [EVIDENCE_MANIFEST.json](EVIDENCE_MANIFEST.json): SHA-256 manifest for the durable audit surface.
+- [verify_final.py](verify_final.py): fail-closed fresh-clone verifier for the one-branch publication state.
 
 From a fresh clone, run:
 
@@ -169,4 +172,4 @@ Thank you to Jeffrey T. H. Wong, Cheng Zhang, Xinye Cao, Pedro Gimenes, Christos
 
 The normalized collection copy uses `main` as its only public branch. The old `master` branch name and the six official topic branches belong to the author repository and are not renamed or rewritten here. Their exact heads and observed purposes are recorded in [`evidence/official_code_audit.md`](evidence/official_code_audit.md) so a reader can distinguish author provenance from this collection's clean branch policy.
 
-All collection commits are authored and committed as `MachineLearning-Nerd <37579156+MachineLearning-Nerd@users.noreply.github.com>`.
+All collection commits are authored and committed as `MachineLearning-Nerd <MachineLearning-Nerd@users.noreply.github.com>`.

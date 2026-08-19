@@ -29,6 +29,10 @@
   "last_checkpoint": "2026-08-17T01:08:24Z",
   "last_known_git_commit": "756c9a72b13cc4d5ee3241a46dbffc894dc19501",
   "publication_allowed": false,
+  "overall_verdict": "PARTIAL_REPRODUCTION_WITH_PAPER_SCALE_CLAIMS_UNVERIFIED",
+  "score_claim": false,
+  "official_author_endorsement": false,
+  "branch_count": 1,
   "compute_policy": "local CPU/local GPU only; no HF cpu-upgrade, Jobs, paid or remote compute",
   "selection_rationale": "Six live claims, public arXiv source, official implementation pinned at DeepWok/a3 master f688fc5d270ea9185fe29ea656bf168f0fab787a, and a source-audited local matrix-algebra path for Theorem 2/3/Lemma 4. Large LLaMA benchmark claims need separate feasibility evidence.",
   "github_repository": "https://github.com/MachineLearning-Nerd/icml26-a3-analytical-low-rank-attention",
@@ -42,5 +46,26 @@
     "verdict": "toy",
     "scope": "five-seed d=12/r=4 clean-room finite A3-QK/A3-OV activation-aware SVD and A3-MLP channel-selection conformance; not LLaMA benchmark or universal theorem verification",
     "evidence": "outputs/claim5_a3_conformance/summary.json"
-  }
+  },
+  "claim_statuses": {
+    "C1": "inconclusive_source_protocol",
+    "C2": "unverified",
+    "C3": "unverified",
+    "C4": "unverified",
+    "C5": "toy_finite_conformance",
+    "C6": "unverified"
+  },
+  "dossier_files": [
+    "CLAIM_EVIDENCE.md",
+    "SOURCE_AUDIT.md",
+    "ENVIRONMENT.md",
+    "REPORT.md",
+    "BRANCH_AUDIT.md",
+    "CITATION.cff",
+    "AUTHOR_THANK_YOU.md",
+    "claims.json",
+    "reproduction_verdicts.json",
+    "EVIDENCE_MANIFEST.json",
+    "verify_final.py"
+  ]
 }
